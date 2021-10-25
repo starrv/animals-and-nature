@@ -1,0 +1,181 @@
+body
+{
+	font-family: 'Arimo', sans-serif;
+}
+
+.mediaPost, .mediaPost2
+{
+	height:300px;
+}
+
+.deleteFormPost, .deleteFormResponse
+{
+	background:inherit;
+	box-shadow: none;
+}
+
+form#signOut
+{
+  background:transparent;
+}
+
+a
+{
+	color: green;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color:green;
+	font-style: italic;
+}
+
+#post, .reply, .edit, .cancel, #updateAccount, #deleteAccount, #signIn, #createAccount, #resetPassword, #sendReport, #hideTermsOfService, #activate, .cancelDeletePost, #resendCode
+{
+	background-color:green;
+	color:white;
+}
+
+.btn-danger
+{
+	background:#gg1100;
+}
+
+#signOut input[type="submit"]
+{
+	border:solid green 1px;
+}
+
+.navbar
+{
+	background: #e4f5e5;
+}
+
+#menu-options
+{
+	border:solid green 1px;
+	color:green;
+}
+
+a
+{
+	font-weight: 900;
+}
+
+.options:hover
+{
+	background:green;
+	color:white;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+.img-fluid
+{
+	 width: 100% \9;
+}
+
+form
+{
+	background: #ebe1bc;
+	overflow-x: hidden;
+}
+
+.options
+{
+	cursor:pointer;
+}
+
+.response
+{
+	display:none;
+}
+
+.response-style
+{
+	background:radial-gradient(#fff,#eee);
+}
+
+
+#hello-user
+{
+	color:#8a7c53;
+	animation:animation1 10s infinite;
+	-webkit-animation: animation1 10s infinite;
+}
+
+.editFormPost, .editFormResponse, .replyFormResponse, .replyFormPost
+{
+	display:none;
+}
+
+#title
+{
+	background:white;
+}
+
+#divider
+{
+	background:white;
+}
+
+form a:hover
+{
+	font-style: italic;
+	text-decoration: underline;
+}
+.success
+{
+	color:green;
+}
+.error
+{
+	color:#801252;
+}
+
+button, input[type="submit"]
+{
+  box-sizing: border-box;
+}
+
+#termsOfService
+{
+	display: none;
+}
+
+#termsOfServiceLink
+{
+	text-decoration:underline;
+	cursor: pointer;
+	font-weight: 900;
+}
+
+#signOut
+{
+	background:#fff;
+	border:none;
+	box-shadow: none;
+}
+
+label, h1, h2, h3, h4, h5, h6
+{
+	font-weight:900;
+}
+
+
+
+@keyframes animation1
+{
+	0% {color: #fff;}
+	50% {color: #8a7c53;}
+}
+
+@-webkit-keyframes animation1 /* Safari and Chrome */
+{
+	0% {color: #fff;}
+	50% {color: #8a7c53;}
+}

@@ -1,0 +1,101 @@
+body
+{
+	background:radial-gradient(#ddd,#624b80);
+/*	font-family: 'Montserrat', sans-serif; */
+	font-family: 'Raleway', sans-serif;
+}
+
+.container
+{
+	background:#fff;
+	box-shadow: 5px 5px 5px #555;
+}
+
+h1
+{
+	text-align:center;
+	animation:animation1 1s infinite;
+	-webkit-animation:animation1 1s infinite;
+}
+
+a
+{
+	color:#473219;
+}
+
+a:hover
+{
+	color:#444;
+	text-decoration: none;
+	font-weight: 900;
+	font-style: italic;
+}
+
+#blackOut
+{
+	opacity:0.7;
+	filter:alpha(opacity=70); /* For IE8 and earlier */
+	background-color:black;
+	top:0px;
+	bottom:0px;
+	height:100%;
+	width:200%;
+	left:-100%;
+	position:fixed;
+}
+
+#yes
+{	
+	background-color: #1d2b1d;
+}
+
+#yes:hover
+{
+	background-color:#1e5930;
+}
+
+#no
+{
+	background-color: #5c054a;
+}
+
+#no:hover
+{
+	background-color:#823474;
+}
+
+#dialog
+{
+	position: fixed;
+	top:300px;
+	left:37.5%;
+	background-color:#fff; 
+	display:none; 
+	font-weight: 900;
+}
+
+#timer
+{
+	position: fixed;
+	top:250px;
+	left:37.5%;
+	background:#fff;
+	font-weight: 900;
+}
+
+hr
+{
+	background-color: #222;
+}
+
+@keyframes animation1
+{
+	to  {color: eeeeee;}
+	from {color: 992255;}
+}
+
+@-webkit-keyframes animation1 /* Safari and Chrome */
+{
+	to  {color: eeeeee;}
+	from{color: 992255;}
+}
