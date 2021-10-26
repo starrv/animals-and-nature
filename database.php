@@ -9,9 +9,12 @@
 	require_once "production-credentials.php";
 
 	$conn;
-	
-	const SITE_URL="https://animalsandnature.net";
+
 	//const SITE_URL="http://localhost:8080/animals-and-nature";
+	const SITE_URL="https://animalsandnature.net";
+
+	//const DOMAIN_URL="localhost";
+	const DOMAIN_URL="animalsandnature.net";
 
 	function disconnect()
 	{
@@ -213,8 +216,8 @@
 												$arr=array (
 																'expires' => time() +2592000,
 																'path' => '/',
-																'domain' => 'localhost',
-															//'secure' => 1,
+																'domain' => DOMAIN_URL,
+																//'secure' => 1,
 																'httponly' => 1,
 																'samesite' => 'lax'
 															);
@@ -2459,7 +2462,7 @@
 		$arr=array (
 						'expires' => time() -3600,
 						'path' => '/',
-						'domain' => 'localhost',
+						'domain' => DOMAIN_URL,
 						//'secure' => 1,
 						'httponly' => 1,
 						'samesite' => 'lax'

@@ -240,6 +240,7 @@
 	else
 	{
 		// user not logged in go back to signin page
+		echo "<script type='text/javascript'>console.log('not signed in');</script>";
 		load('signin.php');
 	}
 ?>
