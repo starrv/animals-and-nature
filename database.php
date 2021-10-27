@@ -217,7 +217,7 @@
 																'expires' => time() +2592000,
 																'path' => '/',
 																'domain' => DOMAIN_URL,
-																//'secure' => 1,
+																'secure' => 1,
 																'httponly' => 1,
 																'samesite' => 'lax'
 															);
@@ -1806,7 +1806,7 @@
 						}
 					</script>
 		";
-		echo "<script type='text/javascript'>console.log('An error has occurred: ".$GLOBALS['conn']->error."');</script>";
+		//echo "<script type='text/javascript'>console.log('An error has occurred: ".$GLOBALS['conn']->error."');</script>";
 	}
 
 	function generateErrorMessageStmt($stmt)
@@ -1822,7 +1822,7 @@
 						}
 					</script>
 		";
-		echo "<script type='text/javascript'>console.log('An error has occurred: ".$stmt->error."');</script>";
+		//echo "<script type='text/javascript'>console.log('An error has occurred: ".$stmt->error."');</script>";
 	}
 
 	function load($url)
@@ -1834,14 +1834,14 @@
 	{
 		http_response_code(500);
 		echo "An error has occurred";
-		echo "<script type='text/javascript'>console.log('An error has occurred: ".$GLOBALS['conn']->error."');</script>";
+		//echo "<script type='text/javascript'>console.log('An error has occurred: ".$GLOBALS['conn']->error."');</script>";
 	}
 
 	function generateErrorStmt($stmt)
 	{
 		http_response_code(500);
 		echo "An error has occurred";
-		echo "<script type='text/javascript'>console.log('An error has occurred: ".$stmt->error."');</script>";
+		//echo "<script type='text/javascript'>console.log('An error has occurred: ".$stmt->error."');</script>";
 	}
 
 	function savePost()
@@ -2463,7 +2463,7 @@
 						'expires' => time() -3600,
 						'path' => '/',
 						'domain' => DOMAIN_URL,
-						//'secure' => 1,
+						'secure' => 1,
 						'httponly' => 1,
 						'samesite' => 'lax'
 					);
