@@ -9,8 +9,8 @@
 	function connect()
 	{
 		$server = $_SERVER['db_server'];
-		$username = $_SERVER['username'];
-		$password = $_SERVER['password'];
+		$username = $_SERVER['db_username'];
+		$password = $_SERVER['db_password'];
 		$db = $_SERVER['db_name'];
 
 		$GLOBALS['conn'] = new mysqli($server, $username, $password, $db);

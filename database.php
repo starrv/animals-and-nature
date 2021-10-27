@@ -1806,7 +1806,7 @@
 						}
 					</script>
 		";
-		//echo "<h5 class='error mt-2 mb-2'>An error has occurred: ".$GLOBALS['conn']->error."</h5>";
+		echo "<script type='text/javascript'>console.log('An error has occurred: ".$GLOBALS['conn']->error."');</script>";
 	}
 
 	function generateErrorMessageStmt($stmt)
@@ -1822,7 +1822,7 @@
 						}
 					</script>
 		";
-		//echo "<h5 class='error mt-2 mb-2'>An error has occurred: ".$stmt->error."</h5>";
+		echo "<script type='text/javascript'>console.log('An error has occurred: ".$stmt->error."');</script>";
 	}
 
 	function load($url)
@@ -1834,14 +1834,14 @@
 	{
 		http_response_code(500);
 		echo "An error has occurred";
-		//echo $GLOBALS['conn']->error;
+		echo "<script type='text/javascript'>console.log('An error has occurred: ".$GLOBALS['conn']->error."');</script>";
 	}
 
 	function generateErrorStmt($stmt)
 	{
 		http_response_code(500);
 		echo "An error has occurred";
-		//echo $stmt->error;
+		echo "<script type='text/javascript'>console.log('An error has occurred: ".$stmt->error."');</script>";
 	}
 
 	function savePost()
@@ -2468,7 +2468,7 @@
 						'samesite' => 'lax'
 					);
 		setcookie('loggedInUser','',$arr);
-		setcookie('timeZoneDiff','','/');
+		setcookie('timeZoneDiff','',time() -3600,'/');
 		load('signin.php');//redirect to sign in page
 	}
 

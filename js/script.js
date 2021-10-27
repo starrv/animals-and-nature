@@ -3,8 +3,7 @@ const scrollAmount=20;
 const scrollFrequency=1;
 const readFrequency=10000;
 
-const site_url="animalsandnature.net/blog.php";
-//const site_url="/animals-and-nature/blog.php";
+const site_url="blog.php";
 
 $(document).ready(function()
 {
