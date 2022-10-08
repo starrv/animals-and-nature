@@ -6,6 +6,11 @@
 
 	require_once "vendor/autoload.php";
 
+	const SITE_URL="https://animalsandnature.net";
+	const DOMAIN_URL="animalsandnature.net";
+	const HTTP_SECURE_ATTRIB=1;
+ 	const HTTP_HTTP_ATTRIB=1;
+
 	function connect()
 	{
 		$server = $_SERVER['db_server'];

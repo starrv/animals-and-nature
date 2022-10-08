@@ -5,16 +5,10 @@
 	ini_set('display_startup_errors', 1);
 	error_reporting(E_ALL);*/
 
-	//require_once "debug-credentials.php";
-	require_once "production-credentials.php";
+	require_once "debug-credentials.php";
+	//require_once "production-credentials.php";
 
 	$conn;
-
-	//const SITE_URL="http://localhost:8080/animals-and-nature";
-	const SITE_URL="https://animalsandnature.net";
-
-	//const DOMAIN_URL="localhost";
-	const DOMAIN_URL="animalsandnature.net";
 
 	function disconnect()
 	{
@@ -217,8 +211,8 @@
 																'expires' => time() +2592000,
 																'path' => '/',
 																'domain' => DOMAIN_URL,
-																'secure' => 1,
-																'httponly' => 1,
+																'secure' => HTTP_SECURE_ATTRIB,
+																'httponly' => HTTP_HTTP_ATTRIB,
 																'samesite' => 'lax'
 															);
 												setcookie("loggedInUser", $row['username'], $arr);
@@ -2463,8 +2457,8 @@
 						'expires' => time() -3600,
 						'path' => '/',
 						'domain' => DOMAIN_URL,
-						'secure' => 1,
-						'httponly' => 1,
+						'secure' => HTTP_SECURE_ATTRIB,
+						'httponly' => HTTP_HTTP_ATTRIB,
 						'samesite' => 'lax'
 					);
 		setcookie('loggedInUser','',$arr);
