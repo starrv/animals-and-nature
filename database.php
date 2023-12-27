@@ -1,9 +1,9 @@
 <?php
 
 	//report errors
-	/*ini_set('display_errors', 1);
+	ini_set('display_errors', 1);
 	ini_set('display_startup_errors', 1);
-	error_reporting(E_ALL);*/
+	error_reporting(E_ALL);
 
 	require_once "debug-credentials.php";
 	//require_once "production-credentials.php";
@@ -1350,6 +1350,9 @@
 		{
 			$pic = file_get_contents($_FILES['pic']['tmp_name']);
 		}
+		else{
+			$pic=file_get_contents("./images/person.jpg");
+		}
 		$fname=$_POST['fname'];
 		$lname=$_POST['lname'];
 		$agreement=$_POST['agreement'];
@@ -1853,7 +1856,7 @@
 			{
 				$newPost="";
 			}
-			$media=null;
+			$media="";
 			if(!empty($_FILES['media']['tmp_name']))
 			{
 				$fileName=$_FILES['media']['name'];
@@ -2008,7 +2011,7 @@
 			$initPostId=$_POST['initPostId'];
 			$newResponse=$_POST['newResponse'];
 			$newResponse="@".$_POST['initUser']." ".$newResponse;
-			$media=null;
+			$media="";
 			$mediaType="";
 			if(!empty($_FILES['media']['tmp_name']))
 			{
