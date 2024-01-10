@@ -1759,7 +1759,7 @@
 						{
 							$row=$result->fetch_assoc();
 							$fname="Animals and Nature Message Board";
-							$email=$_SERVER['webmaster_email'];
+							$email="webmaster@animalsandnature.net";
 							$body="<p>".$_POST['message']."</p><p>Sincerely,</p><p><strong>User</strong>: ".$_POST['loggedInUser']."</p><p><strong>Email</strong>: ".$row['email']."</p>";
 							$altBody=$_POST['message']."Sincerely, User ".$_POST['loggedInUser']." Email:".$row['email'];
 							if(sendEmail($fname,$email,$subject,$body,$altBody))
