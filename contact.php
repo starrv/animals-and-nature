@@ -30,7 +30,7 @@
 					<img class="img-fluid text-center rounded-circle mx-auto d-block" src="images/leaf.jpg" width="75" height="75">
 				</div>
 			</div>
-			<form method="post" class="col-sm-6 border border-dark rounded p-4 m-4 mx-auto w-50">
+			<form method="post" enctype="multipart/form-data" class="col-sm-6 border border-dark rounded p-4 m-4 mx-auto w-50">
 				<?php
 					require 'database.php';
 					if(isset($_COOKIE['loggedInUser']))
@@ -60,6 +60,13 @@
 				   		Message:*
 				   	</label>
 						<textarea id="message" name="message" class="form-control border border-secondary rounded" autocomplete="true" required><?php if(!empty($_POST['message'])){ echo $_POST['message'];}else{ echo "";} ?></textarea>
+					</div>
+
+					<div class="form-group mt-2 mb-2">
+						<label for="media">
+				   		Image:*
+				   	</label>
+						<input type="file" id="media" name="media" class="form-control border border-secondary rounded">
 					</div>
 
 					<div class="form-group mt-2 mb-2">

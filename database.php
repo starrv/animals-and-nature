@@ -1760,9 +1760,17 @@
 							$row=$result->fetch_assoc();
 							$fname="Animals and Nature Message Board";
 							$email="webmaster@animalsandnature.net";
+							//$email="valesta36@gmail.com";
 							$body="<p>".$_POST['message']."</p><p>Sincerely,</p><p><strong>User</strong>: ".$_POST['loggedInUser']."</p><p><strong>Email</strong>: ".$row['email']."</p>";
 							$altBody=$_POST['message']."Sincerely, User ".$_POST['loggedInUser']." Email:".$row['email'];
-							if(sendEmail($fname,$email,$subject,$body,$altBody))
+							$attachment=null;
+							$attachment_name="";
+							var_dump($_FILES);
+							if(!empty($_FILES['media']['tmp_name']) && !empty($_FILES['media']['name'])){
+								$attachment=$_FILES['media']['tmp_name'];
+								$attachment_name=$_FILES['media']['name'];
+							}
+							if(sendEmail($fname,$email,$subject,$body,$altBody,$attachment,$attachment_name))
 							{
 								echo "	<h5 class='success mt-2 mb-2'>
 													Message sent
