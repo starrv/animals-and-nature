@@ -33,11 +33,33 @@
 			<form method="post" enctype="multipart/form-data" class="col-sm-6 border border-dark rounded p-4 m-4 mx-auto w-50">
 				<?php
 					require 'database.php';
+					$MAX_MSG_SIZE=1000;
+					$MAX_SUBJECT_SIZE=25;
+					$MAX_FILE_SIZE=100000;
 					if(isset($_COOKIE['loggedInUser']))
 					{
 						if(!(empty($_POST['subject']) || empty($_POST['message'])))
 						{
-							sendReport();
+							if(strlen($_POST['subject'])<=$MAX_SUBJECT_SIZE && strlen($_POST['message'])<=$MAX_MSG_SIZE){
+								if(empty($_FILES['media']) ){
+									sendReport();
+								}
+								else{
+									if($_FILES['media']['size']<=$MAX_FILE_SIZE){
+										sendReport();
+									}
+									else{
+										$size_kb=$MAX_FILE_SIZE/1000;
+										echo "<p class='error'>File upload cannot be larger than ".$size_kb."KB</p>";
+									}
+								}
+							}
+							else if(strlen($_POST['subject'])>$MAX_SUBJECT_SIZE){
+								echo "<p class='error'>Subject cannot be larger than ".$MAX_SUBJECT_SIZE." characters</p>";
+							}
+							else if(strlen($_POST['message'])>$MAX_MSG_SIZE){
+								echo "<p class='error'>Message cannot be larger than ".$MAX_MSG_SIZE." characters</p>";
+							}
 						}
 					}
 					else
@@ -66,7 +88,7 @@
 						<label for="media">
 				   		Image:*
 				   	</label>
-						<input type="file" id="media" name="media" class="form-control border border-secondary rounded">
+						<input type="file" id="media" name="media" accept="image/png, image/jpeg, image/jpg, image/gif" class="form-control border border-secondary rounded">
 					</div>
 
 					<div class="form-group mt-2 mb-2">
