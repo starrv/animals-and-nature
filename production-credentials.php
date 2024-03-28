@@ -10,6 +10,7 @@
 	const DOMAIN_URL="animalsandnature.net";
 	const HTTP_SECURE_ATTRIB=1;
  	const HTTP_HTTP_ATTRIB=1;
+	const WEBMASTER_EMAIL=$_SERVER['webmaster_email'];
 
 	function connect()
 	{
