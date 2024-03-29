@@ -2516,7 +2516,7 @@
 						$date=$date->setTimestamp($timeStamp);
 						//		echo $date->format('M d, Y h:i:s A');
 						echo  "
-						<div id='".$row['postId']."' class='row post p-4'><div class='post-style border border-secondary rounded col-md-6 mx-auto mt-4 mb-4 p-2'><h5 class='w-75 m-2 header-post'>";
+						<div id='".$row['postId']."' class='row post p-4'><div class='post-style border border-secondary rounded col-md-9 mx-auto mt-4 mb-4 p-2'><h5 class='w-75 m-2 header-post'>";
 
 						$sql="select pic from accounts where username='$row[username]'";
 						$result2=$GLOBALS['conn']->query($sql);

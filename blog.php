@@ -139,7 +139,7 @@
 			echo '
 					<div class="container-fluid">
 						<h1 class="m-4" id="hello-user">Welcome '.$fname.' '.$lname.'</h1>
-						<form method="post" name="postForm" id="postForm" class="col-md-6 border border-secondary rounded p-2 m-2" enctype="multipart/form-data">
+						<form method="post" name="postForm" id="postForm" class="col-md-9 border border-secondary rounded p-2 m-2" enctype="multipart/form-data">
 							<div class="form-group mt-2 mb-2">
 								<textarea id="newPost" id="newPost" name="newPost" rows="3" class="form-control border border-secondary rounded">'; if(!empty($_POST['newPost'])){echo $_POST['newPost'];} echo '</textarea>
 							</div>
