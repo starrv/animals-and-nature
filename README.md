@@ -5,3 +5,24 @@ This is a message board where animal enthusiasts could engage in discussions per
 There is a complimentary web application, Animals and Nature Messages, where administrators could easily login and read customer feedback pertaining to Animals and Nature.  You would need an adminstrator account to view messages.  A Next.js application provides the user interface and OpenID Connect was used for authentication.  Vercel was used for deployment of the user interface. [Learn More](https://github.com/starrv/animals-and-nature-messages).
 
 A Spring Boot REST API provides CRUD operations for the emails.  AWS SNS and AWS Lambda was used to receive email messages and send the messages to the API.  Authorization was built in using OAuth 2.0.  The API was hosted on Google Cloud Platform.  [Learn more](https://github.com/starrv/animals-and-nature-messages-api).
+
+Technologies Used:
+
+- HTML
+- CSS
+- Bootstrap
+- JavaScript
+- jQuery
+- AJAX
+- PHP
+- MySQL
+- Git
+- GitHub
+- Next.js
+- Okta
+- Vercel
+- Spring Boot
+- MongoDB
+- AWS SNS
+- AWS Lambda
+- GCP
